@@ -1,0 +1,348 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-width: 320px;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.left-section {
+  width: 70%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: rgba(0, 65, 145, 0.55);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.samruddhi-logo {
+  width: 165px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.samruddhi-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.msrdc-logo {
+  width: 40px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.msrdc-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.welcome-content {
+  margin: auto 0;
+  color: #ffffff;
+}
+
+.welcome-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.welcome-content h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.welcome-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.right-section {
+  width: 30%;
+  min-height: 100vh;
+  background: #f0f4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.login-box h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 6px;
+}
+
+.login-box > p {
+  font-size: 17px;
+  color: #777777;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Form */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 7px;
+}
+
+.login-box input {
+  width: 100%;
+  height: 44px;
+  padding: 0 15px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 7px;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 22px;
+  transition: 0.3s ease;
+}
+
+.login-box input:focus {
+  border-color: #1558b0;
+  box-shadow: 0 0 0 2px rgba(21, 88, 176, 0.1);
+}
+
+.password-field {
+  width: 100%;
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 65px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 44px;
+  background: transparent !important;
+  color: #1558b0 !important;
+  border: none;
+  font-size: 12px !important;
+  cursor: pointer;
+}
+
+/* Login Button */
+.login-box form > button[type="submit"] {
+  width: 100%;
+  height: 45px;
+  background: #1558b8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-box form > button[type="submit"]:hover {
+  background: #104a9b;
+}
+
+/* Messages */
+.error-message {
+  color: #d32f2f !important;
+  font-size: 13px !important;
+  margin-top: 12px;
+}
+
+.success-message {
+  color: #188038 !important;
+  font-size: 13px !important;
+  margin-top: 12px;
+}
+
+/* Powered By */
+.powered {
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+  width: 30%;
+  text-align: center;
+  color: #777777;
+  font-size: 12px;
+}
+
+.powered strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  color: #252d42;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .left-section {
+    width: 60%;
+  }
+
+  .right-section {
+    width: 40%;
+    padding: 25px;
+  }
+
+  .powered {
+    width: 40%;
+  }
+
+  .welcome-content h1 {
+    font-size: 34px;
+  }
+
+  .overlay {
+    padding: 25px;
+  }
+
+  .logos {
+    top: 25px;
+    left: 25px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  .overlay {
+    min-height: 320px;
+    padding: 20px;
+  }
+
+  .logos {
+    top: 20px;
+    left: 20px;
+  }
+
+  .samruddhi-logo {
+    width: 135px;
+    height: 40px;
+  }
+
+  .msrdc-logo {
+    width: 34px;
+    height: 40px;
+  }
+
+  .welcome-content h1 {
+    font-size: 30px;
+  }
+
+  .welcome-content h2 {
+    font-size: 18px;
+  }
+
+  .welcome-content p {
+    font-size: 13px;
+  }
+
+  .right-section {
+    width: 100%;
+    min-height: 500px;
+    padding: 35px 25px 100px;
+  }
+
+  .powered {
+    position: static;
+    width: 100%;
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-section,
+  .overlay {
+    min-height: 280px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .logos {
+    top: 15px;
+    left: 15px;
+  }
+
+  .welcome-content h1 {
+    font-size: 27px;
+  }
+
+  .welcome-content h2 {
+    font-size: 16px;
+  }
+
+  .right-section {
+    padding: 30px 20px 80px;
+  }
+
+  .login-box {
+    max-width: 100%;
+  }
+}
